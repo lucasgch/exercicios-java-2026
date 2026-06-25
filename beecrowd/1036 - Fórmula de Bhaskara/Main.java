@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class Main {
  
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);

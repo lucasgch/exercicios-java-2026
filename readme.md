@@ -1,0 +1,15 @@
+# Exercícios em Java - 2026
+
+## Como usar esse repositório
+
+- Crie uma conta gratuita em [https://judge.beecrowd.com/](https://judge.beecrowd.com/)
+- Me adicione: https://judge.beecrowd.com/pt/profile/1263940
+- Navegue pelo índice abaixo para consultar o enunciado dos problemas resolvidos
+- Navegue pelas pastas do repostório para encontrar sugestões de solução
+- Qualquer dúvida ou sugestão, entre em contato.
+
+## beecrowd
+
+- [1021 - Notas e moedas](https://judge.beecrowd.com/pt/problems/view/1021)
+- [1036 - Fórmula de Bhaskara](https://judge.beecrowd.com/pt/problems/index/1)
+- [- 1037 - Intervalo](https://judge.beecrowd.com/pt/problems/view/1037)

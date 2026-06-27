@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
  
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) throws IOException {
         
         Scanner scanner = new Scanner(System.in);
@@ -11,6 +12,7 @@ public class Main {
         float A = scanner.nextFloat();
         float B = scanner.nextFloat();
         float C = scanner.nextFloat();
+        scanner.close();
 
         // Ordenar os valores de forma decrescente        
         float aux;

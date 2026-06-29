@@ -12,33 +12,17 @@ public class Main {
         double salario = scanner.nextDouble();
         scanner.close();
         
-        double imposto = 0.0;
+        double imposto;
 
         if (salario <= 2000.00) {
             System.out.println("Isento");
-            return; // Se menor que 2mil, imprime e encerra
-        } 
-        
-        // Se maior que 2000.00
-        if (salario > 4500.00) {
-            // 28% sobre o que passa de 4500
-            imposto += (salario - 4500.00) * 0.28;
-            // +18% sobre a faixa inteira de 3000 a 4500
-            imposto += 1500.00 * 0.18;
-            // +8% sobre a faixa inteira de 2000 a 3000
-            imposto += 1000.00 * 0.08;
-        } 
-        else if (salario > 3000.00) {
-            // 18% sobre o que passa de 3000
-            imposto += (salario - 3000.00) * 0.18;
-            // +8% sobre a faixa inteira de 2000 a 3000
-            imposto += 1000.00 * 0.08;
-        } 
-        else {
-            // 8% sobre o que passa de 2000
-            imposto += (salario - 2000.00) * 0.08;
+        } else {
+            imposto = Math.max(0, salario - 2000) * 0.08 // primeira faixa 8%
+                           + Math.max(0, salario - 3000) * 0.10 // 8+10=18%
+                           + Math.max(0, salario - 4500) * 0.10; // 8+10+10=28%
+
+            System.out.printf(Locale.US, "R$ %.2f%n", imposto);
         }
 
-        System.out.printf(Locale.US, "R$ %.2f%n", imposto);
     }
 }

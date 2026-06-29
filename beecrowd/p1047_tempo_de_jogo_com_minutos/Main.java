@@ -1,3 +1,5 @@
+package beecrowd.p1047_tempo_de_jogo_com_minutos;
+
 import java.util.Scanner;
 
 public class Main {

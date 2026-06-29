@@ -1,3 +1,5 @@
+package beecrowd.p1048_aumento_salario;
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;

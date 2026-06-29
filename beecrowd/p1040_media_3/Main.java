@@ -1,3 +1,5 @@
+package beecrowd.p1040_media_3;
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;

@@ -1,3 +1,5 @@
+package beecrowd.p1038_lanche;
+
 import java.util.Scanner;
 
 public class Main{

@@ -1,3 +1,5 @@
+package beecrowd.p1051_imposto_de_renda;
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;

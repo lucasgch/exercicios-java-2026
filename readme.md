@@ -22,5 +22,6 @@
 - [1046 - Tempo de jogo](https://judge.beecrowd.com/pt/problems/view/1046)
 - [1047 - Tempo de jogo com minutos](https://judge.beecrowd.com/pt/problems/view/1047)
 - [1048 -Aumento de salário](https://judge.beecrowd.com/pt/problems/view/1048)
+- [1049 - Animal](https://judge.beecrowd.com/pt/problems/view/1049)
 - [1050 - DDD](https://judge.beecrowd.com/pt/problems/view/1050)
 - [1051 - Imposto de renda](https://judge.beecrowd.com/pt/problems/view/1051)

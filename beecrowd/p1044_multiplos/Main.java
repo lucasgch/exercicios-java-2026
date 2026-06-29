@@ -1,3 +1,5 @@
+package beecrowd.p1044_multiplos;
+
 import java.io.IOException;
 import java.util.Scanner;
 

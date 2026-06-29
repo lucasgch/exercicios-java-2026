@@ -1,3 +1,5 @@
+package beecrowd.p1041_coordenadas_de_um_ponto;
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;

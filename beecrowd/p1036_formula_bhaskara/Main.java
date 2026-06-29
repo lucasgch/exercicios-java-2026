@@ -1,3 +1,5 @@
+package beecrowd.p1036_formula_bhaskara;
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,23 +13,23 @@ public class Main {
  
     @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) throws IOException {
-            
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
         double A = scanner.nextDouble();
         double B = scanner.nextDouble();
         double C = scanner.nextDouble();
         scanner.close();
- 
-        // Condição: soma de dois lados SEMPRE maior que o terceiro
-        if ((A + B > C) && (A + C > B) && (B + C > A)) {
-            double perimetro = A + B + C;
-            System.out.printf("Perimetro = %.1f%n", perimetro);
+        
+        double delta = Math.pow(B,2)-4*A*C;
+        if (delta<=0||A==0){
+            System.out.println("Impossivel calcular");
         } else {
-            double area = ((A + B) * C) / 2;
-            System.out.printf("Area = %.1f%n", area);
+            double R1 = (-B + Math.sqrt(delta)) / (2 * A);
+            double R2 = (-B - Math.sqrt(delta)) / (2 * A);
+            System.out.printf("R1 = %.5f%n",R1);
+            System.out.printf("R2 = %.5f%n",R2);
         }
- 
+        
     }
  
 }

@@ -1,3 +1,5 @@
+package beecrowd.p1045_tipos_de_triangulos;
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;

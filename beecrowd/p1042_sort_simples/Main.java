@@ -1,3 +1,5 @@
+package beecrowd.p1042_sort_simples;
+
 import java.io.IOException;
 import java.util.Scanner;
 

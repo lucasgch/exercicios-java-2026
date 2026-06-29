@@ -1,3 +1,5 @@
+package beecrowd.p1050_ddd;
+
 import java.util.Scanner;
 
 public class Main {

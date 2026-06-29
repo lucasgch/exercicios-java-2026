@@ -1,3 +1,5 @@
+package beecrowd.p1046_tempo_de_jogo;
+
 import java.util.Scanner;
 public class Main {
     

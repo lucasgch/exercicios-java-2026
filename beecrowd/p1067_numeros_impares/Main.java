@@ -1,4 +1,4 @@
-package beecrowd.p_1067_numeros_impares;
+package beecrowd.p1067_numeros_impares;
 
 import java.io.IOException;
 import java.util.Scanner;

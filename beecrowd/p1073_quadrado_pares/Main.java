@@ -1,4 +1,4 @@
-package beecrowd.p1072_intervalo_2;
+package beecrowd.p1073_quadrado_pares;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -10,16 +10,14 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int in = 0;
+        sc.close();
+
         for (int i = 1; i <= n; i++) {
-            int entrada = sc.nextInt();
-            if (entrada>=10 && entrada<=20){
-                in++;
+            if (i % 2 == 0) {
+                System.out.printf("%d^%d = %d%n",i,2,((int)Math.pow(i,2)));
             }
         }
-        sc.close();
-        System.out.println(in+" in");
-        System.out.println(n-in+" out");
+
     }
 
 }

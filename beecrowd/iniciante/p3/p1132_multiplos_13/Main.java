@@ -1,4 +1,33 @@
 package beecrowd.iniciante.p3.p1132_multiplos_13;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        Scanner sc = new Scanner(System.in);
+        int n1 =  sc.nextInt();
+        int n2 = sc.nextInt();
+        sc.close();
+        int temp = 0;
+
+        // garante que n1 é menor ou igual
+        if (n1>n2){
+            temp = n1;
+            n1 = n2;
+            n2 = temp;
+        }
+
+        int soma = 0;
+        for (int i = n1; i <= n2; i++) {
+            if ( i % 13 != 0 ){
+                soma+=i;
+            }
+        }
+
+        System.out.println(soma);
+    }
+
 }

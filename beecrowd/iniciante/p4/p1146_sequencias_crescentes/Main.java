@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1146_sequ^encias_crescentes;
+package beecrowd.iniciante.p4.p1146_sequencias_crescentes;
 
 import java.io.IOException;
 

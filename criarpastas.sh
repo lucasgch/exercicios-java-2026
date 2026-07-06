@@ -4,7 +4,6 @@
 PACOTE_BASE="beecrowd.iniciante.p4"
 
 # Lista de exercícios fornecida (ID e Nome)
-# Usando heredoc para ler a lista linha por linha
 exercicios=$(cat << 'EOF'
 1145   Sequência Lógica 2
 1146   Sequências Crescentes
@@ -42,31 +41,41 @@ echo "$exercicios" | while read -r linha; do
     # Extrai o número do exercício (primeira palavra)
     id=$(echo "$linha" | awk '{print $1}')
 
-    # Extrai o nome do exercício (removendo o ID e espaços extras das pontas)
-    nome_cru=$(echo "$linha" | sed -E "s/^$id[[:space:]]+//")
+    # Extrai o nome do exercício e remove o "Favorite" do final
+    nome_cru=$(echo "$linha" | sed -E "s/^$id[[:space:]]+//" | sed -E "s/[[:space:]]+Favorite[[:space:]]*$//")
 
-    # Limpa a palavra "Favorite" caso ela exista no final da linha
-    nome_cru=$(echo "$nome_cru" | sed -E "s/[[:space:]]+Favorite[[:space:]]*$//")
+    # Tratamento rigoroso de caracteres:
+    # 1. Transforma tudo para minúsculas primeiro
+    nome_formatado=$(echo "$nome_cru" | tr '[:upper:]' '[:lower:]')
 
-    # Tratamento de texto para o padrão de pacote Java:
-    # 1. Remove acentos (converte Sequência -> Sequencia)
-    # 2. Transforma em minúsculas
-    # 3. Substitui espaços por underscores (_)
-    nome_formatado=$(echo "$nome_cru" | iconv -f UTF-8 -t ASCII//TRANSLIT | tr '[:upper:]' '[:lower:]' | tr -s ' ' '_')
+    # 2. Substitui caracteres acentuados comuns por suas versões limpas
+    nome_formatado=$(echo "$nome_formatado" | sed '
+        s/[áàãâä]/a/g;
+        s/[éèêë]/e/g;
+        s/[íìîï]/i/g;
+        s/[óòõôö]/o/g;
+        s/[úùûü]/u/g;
+        s/ç/c/g;
+    ')
 
-    # Monta o nome final do subpacote (ex: p1145_sequencia_logica_2)
+    # 3. Remove qualquer apóstrofo ou aspas que tenham sobrado
+    nome_formatado=$(echo "$nome_formatado" | sed "s/['\`]//g")
+
+    # 4. Substitui espaços por underscores (_) e limpa duplicados
+    nome_formatado=$(echo "$nome_formatado" | tr -s ' ' '_')
+
+    # Monta o nome final do subpacote (ex: p1164_numero_perfeito)
     sub_pacote="p${id}_${nome_formatado}"
 
-    # O caminho do diretório em Java segue a estrutura de pontos convertida em barras
-    # Ex: beecrowd/iniciante/p4/p1145_sequencia_logica_2
+    # Converte os pontos do pacote em barras para criar os diretórios
     caminho_diretorio=$(echo "${PACOTE_BASE}.${sub_pacote}" | tr '.' '/')
 
     echo "Criando estrutura para: $sub_pacote..."
 
-    # Cria a pasta e todas as pastas pai necessárias (-p)
+    # Cria a pasta e todas as pastas pai necessárias
     mkdir -p "$caminho_diretorio"
 
-    # Cria o arquivo Main.java com o conteúdo dinâmico do pacote
+    # Cria o arquivo Main.java
     cat << EOL > "${caminho_diretorio}/Main.java"
 package ${PACOTE_BASE}.${sub_pacote};
 
@@ -95,4 +104,4 @@ EOL
 
 done
 
-echo "Concluído! Todas as pastas e arquivos Main.java foram criados com sucesso."
+echo "Concluído! Agora sim tudo limpo e sem caracteres parasitas."

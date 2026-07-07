@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1151_fibonacci_f'acil;
+package beecrowd.iniciante.p4.p1151_fibonacci_facil;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1165_n'umero_primo;
+package beecrowd.iniciante.p4.p1165_numero_primo;
 
 import java.io.IOException;
 

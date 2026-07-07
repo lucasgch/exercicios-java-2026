@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1158_soma_de_'impares_consecutivos_iii;
+package beecrowd.iniciante.p4.p1158_soma_de_impares_consecutivos_iii;
 
 import java.io.IOException;
 

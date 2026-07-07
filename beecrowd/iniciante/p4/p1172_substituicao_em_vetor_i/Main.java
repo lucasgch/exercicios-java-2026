@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1172_substituic~ao_em_vetor_i;
+package beecrowd.iniciante.p4.p1172_substituicao_em_vetor_i;
 
 import java.io.IOException;
 

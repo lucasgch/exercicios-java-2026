@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1156_sequ^encia_s_ii;
+package beecrowd.iniciante.p4.p1156_sequencia_s_ii;
 
 import java.io.IOException;
 

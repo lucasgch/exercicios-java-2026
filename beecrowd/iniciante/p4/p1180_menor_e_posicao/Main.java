@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1180_menor_e_posic~ao;
+package beecrowd.iniciante.p4.p1180_menor_e_posicao;
 
 import java.io.IOException;
 

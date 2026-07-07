@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p4.p1164_n'umero_perfeito;
+package beecrowd.iniciante.p4.p1164_numero_perfeito;
 
 import java.io.IOException;
 

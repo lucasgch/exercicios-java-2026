@@ -11,3 +11,4 @@
 ## Enunciados no site do beecrowd
 
 - [Trilha iniciante](https://judge.beecrowd.com/pt/problems/index/1)
+- [Lista completa com todos os níveis/categorias](https://judge.beecrowd.com/pt/categories)

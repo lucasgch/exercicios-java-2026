@@ -1,23 +1,36 @@
 package beecrowd.iniciante.p4.p1150_ultrapassando_z;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int X = sc.nextInt();
 
+        int Z = X;
+
+        // Z deve ser maior que X
+        while (Z <= X) {
+            Z = sc.nextInt();
+        }
+
+        // Começa em 1 porque o próprio X já está na soma
+        int contagem = 1;
+        int soma = X;
+
+        // Variável auxiliar: próximos números (X + 1, X + 2...)
+        int proximoNumero = X + 1;
+
+        while (soma <= Z) {
+            soma += proximoNumero;
+            proximoNumero++;
+            contagem++;
+        }
+
+        System.out.println(contagem);
+        sc.close();
     }
-
 }

@@ -2,22 +2,14 @@ package beecrowd.iniciante.p4.p1155_sequencia_s;
 
 import java.io.IOException;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
-
+        double s = 1;
+        for (int i = 2; i <= 100; i++) {
+            s += 1.0/i;
+        }
+        System.out.printf("%.2f%n",s);
     }
 
 }

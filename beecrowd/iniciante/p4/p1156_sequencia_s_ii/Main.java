@@ -2,22 +2,16 @@ package beecrowd.iniciante.p4.p1156_sequencia_s_ii;
 
 import java.io.IOException;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
-
+        double soma = 1;
+        double denominador = 2;
+        for (int i = 3; i <= 39; i+=2) {
+            soma += (i / denominador);
+            denominador *= 2.0;
+        }
+        System.out.printf("%.2f%n",soma);
     }
-
 }

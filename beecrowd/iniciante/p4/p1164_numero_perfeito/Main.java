@@ -1,22 +1,33 @@
 package beecrowd.iniciante.p4.p1164_numero_perfeito;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+
+            int x = sc.nextInt();
+            int soma = 0;
+
+            for (int j = 1; j <= x-1; j++) {
+                if (x%j==0) {
+                    soma+=j;
+                }
+            }
+            System.out.print(x);
+            if (soma==x){
+                System.out.println(" eh perfeito");
+            } else {
+                System.out.println(" nao eh perfeito");
+            }
+
+        }
 
     }
 

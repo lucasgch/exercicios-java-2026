@@ -1,22 +1,37 @@
 package beecrowd.iniciante.p4.p1177_preenchimento_de_vetor_ii;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        int[] v = new int[1000];
+        int atual = 0;
+
+        for (int i = 0; i < v.length; i++) {
+
+            if ( atual < t ){
+                v[i] = atual;
+                atual++;
+            } else {
+                atual = 1;
+            }
+
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < v.length; i++) {
+            int n = v[i];
+            // "Fib(N) = X"
+            sb.append("N[").append(i).append("] = ").append(n).append("\n");
+        }
+
+        System.out.print(sb.toString());
 
     }
 

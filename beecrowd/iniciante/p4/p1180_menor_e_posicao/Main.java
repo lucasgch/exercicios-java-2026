@@ -1,23 +1,28 @@
 package beecrowd.iniciante.p4.p1180_menor_e_posicao;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc =  new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] vetor = new int[n];
 
+        int menorValor = Integer.MAX_VALUE;
+        int posicaoMenorValor = 0;
+        for (int i = 0; i <= vetor.length-1; i++) {
+            vetor[i] = sc.nextInt();
+            if (vetor[i] < menorValor) {
+                menorValor = vetor[i];
+                posicaoMenorValor = i;
+            }
+        }
+
+        System.out.println("Menor valor: " + menorValor);
+        System.out.println("Posicao: " + posicaoMenorValor);
     }
 
 }

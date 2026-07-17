@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p5.p1185_acima_da_diagonal_secundaaria;
+package beecrowd.iniciante.p5.p1186_abaixo_da_diagonal_secundaaria;
 
 import java.io.IOException;
 import java.util.Scanner;

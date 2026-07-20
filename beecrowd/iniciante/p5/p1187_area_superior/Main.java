@@ -19,7 +19,7 @@ public class Main {
             for  (int j=0; j<12; j++){
                 matriz[i][j] = sc.nextDouble();
 
-                if (j > i && j < 11 - i) {
+                if (i > j && j < 11 - i) {
                     soma += matriz[i][j];
                     contador++;
                 }

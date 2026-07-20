@@ -1,35 +1,29 @@
 #!/bin/bash
 
-# Define o pacote base comum a todos os exercícios
-PACOTE_BASE="beecrowd.iniciante.p4"
+# Define o pacote base comum a todos os exercícios (Ajustado para p5)
+PACOTE_BASE="beecrowd.iniciante.p5"
 
-# Lista de exercícios fornecida (ID e Nome)
+# Lista de exercícios fornecida (ID e Nome) - Página 5 do Beecrowd
 exercicios=$(cat << 'EOF'
-1145   Sequência Lógica 2
-1146   Sequências Crescentes
-1149   Somando Inteiros Consecutivos
-1150   Ultrapassando Z
-1151   Fibonacci Fácil
-1153   Fatorial Simples
-1154   Idades
-1155   Sequência S
-1156   Sequência S II
-1157   Divisores I
-1158   Soma de Ímpares Consecutivos III
-1159   Soma de Pares Consecutivos
-1160   Crescimento Populacional
-1164   Número Perfeito
-1165   Número Primo
-1172   Substituição em Vetor I
-1173   Preenchimento de Vetor I
-1174   Seleçao em Vetor I
-1175   Troca em Vetor I
-1176   Fibonacci em Vetor
-1177   Preenchimento de Vetor II
-1178   Preenchimento de Vetor III
-1179   Preenchimento de Vetor IV
-1180   Menor e Posição   Favorite
-1181   Linha na Matriz   Favorite
+1182   Coluna na Matriz   Favorite
+1183   Acima da Diagonal Principal   Favorite
+1184   Abaixo da Diagonal Principal   Favorite
+1185   Acima da Diagonal Secundária   Favorite
+1186   Abaixo da Diagonal Secundária   Favorite
+1187   Área Superior   Favorite
+1188   Área Inferior   Favorite
+1189   Área Esquerda   Favorite
+1190   Área Direita   Favorite
+1435   Matriz Quadrada I   Favorite
+1478   Matriz Quadrada II   Favorite
+1534   Matriz 123   Favorite
+1541   Construindo Casas   Favorite
+1557   Matriz Quadrada III   Favorite
+1564   Vai Ter Copa?   Favorite
+1589   Bob Conduite   Favorite
+1759   Ho Ho Ho   Favorite
+1789   A Corrida de Lesmas   Favorite
+1827   Matriz Quadrada IV   Favorite
 EOF
 )
 
@@ -64,7 +58,7 @@ echo "$exercicios" | while read -r linha; do
     # 4. Substitui espaços por underscores (_) e limpa duplicados
     nome_formatado=$(echo "$nome_formatado" | tr -s ' ' '_')
 
-    # Monta o nome final do subpacote (ex: p1164_numero_perfeito)
+    # Monta o nome final do subpacote (ex: p1182_coluna_na_matriz)
     sub_pacote="p${id}_${nome_formatado}"
 
     # Converte os pontos do pacote em barras para criar os diretórios
@@ -104,4 +98,4 @@ EOL
 
 done
 
-echo "Concluído! Agora sim tudo limpo e sem caracteres parasitas."
+echo "Concluído! Pasta 'p5' gerada com sucesso."

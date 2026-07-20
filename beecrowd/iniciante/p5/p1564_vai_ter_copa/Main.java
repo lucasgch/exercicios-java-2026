@@ -1,4 +1,4 @@
-package beecrowd.iniciante.p5.p1564_vai_ter_copa?;
+package beecrowd.iniciante.p5.p1564_vai_ter_copa;
 
 import java.io.IOException;
 

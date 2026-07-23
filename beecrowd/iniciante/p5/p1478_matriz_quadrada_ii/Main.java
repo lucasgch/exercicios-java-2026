@@ -1,23 +1,49 @@
 package beecrowd.iniciante.p5.p1478_matriz_quadrada_ii;
 
 import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+        String line;
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        while ((line = reader.readLine()) != null) {
+            line = line.trim();
+            if (line.isEmpty()) continue;
 
+            int n = Integer.parseInt(line);
+
+            if (n == 0) {
+                break;
+            }
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    int valor = Math.abs(i - j) + 1;
+
+                    if (j > 0) {
+                        writer.write(" ");
+                    }
+
+                    if (valor < 10) {
+                        writer.write("  ");
+                    } else if (valor < 100) {
+                        writer.write(" ");
+                    }
+
+                    writer.write(Integer.toString(valor));
+                }
+                writer.newLine();
+            }
+            writer.newLine();
+        }
+
+        writer.flush();
     }
-
 }

@@ -3,11 +3,6 @@ package beecrowd.iniciante.p5.p1534_matriz_123;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
-
-* Prioridade 2: Esta posição está na diagonal secundária? Se sim, coloque 2.
-* Padrão: Se não for nenhuma das diagonais, coloque 3.
-*/
 public class Main {
 
     public static void main(String[] args) throws IOException {

@@ -6,39 +6,34 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
 
-        while (n>=3 && n<=70){
-
+        while (sc.hasNextInt()) {
+            int n = sc.nextInt();
             imprimeMatriz(n);
-
-            n = sc.nextInt();
         }
 
+        sc.close();
     }
 
     private static void imprimeMatriz(int n) {
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                // Se diagonal principal: 1.
-                if (i==j){
-                    System.out.print(1);
-                }
-                // Se diagonal secundária: 2.
-                else if (i + j == n - 1){
+
+                // Diagonal secundária
+                if (i + j == n - 1) {
                     System.out.print(2);
                 }
-                // Senão: 3.
+                // Diagonal principal
+                else if (i == j) {
+                    System.out.print(1);
+                }
+                // Resto
                 else {
                     System.out.print(3);
                 }
             }
             System.out.println();
         }
-        System.out.println();
     }
-
 }

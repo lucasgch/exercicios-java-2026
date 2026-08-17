@@ -1,6 +1,7 @@
 package beecrowd.iniciante.p6.p1865_mjolnir;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * IMPORTANT:
@@ -12,11 +13,25 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int c = sc.nextInt();
+
+        String name;
+        int forca;
+        for (int i = 1; i <= c; i++) {
+            name = sc.next();
+            sc.nextInt();
+            if (name.equals("Thor")){
+                System.out.println("Y");
+            } else{
+                System.out.println("N");
+            }
+        }
+
+
+
+
+
 
     }
 

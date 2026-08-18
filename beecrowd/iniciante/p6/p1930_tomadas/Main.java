@@ -1,22 +1,23 @@
 package beecrowd.iniciante.p6.p1930_tomadas;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int t1 = sc.nextInt();
+        int t2 = sc.nextInt();
+        int t3 = sc.nextInt();
+        int t4 = sc.nextInt();
+
+        int soma = (t1-1)+(t2-1)+(t3-1)+t4;
+
+        System.out.println(soma);
+
+        sc.close();
 
     }
 

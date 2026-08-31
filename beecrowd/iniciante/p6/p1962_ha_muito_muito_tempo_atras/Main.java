@@ -1,23 +1,33 @@
 package beecrowd.iniciante.p6.p1962_ha_muito_muito_tempo_atras;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.IOException;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
-
     public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        String line = reader.readLine();
+        if (line == null || line.trim().isEmpty()) {
+            return;
+        }
 
+        int n = Integer.parseInt(line.trim());
+
+        for (int i = 0; i < n; i++) {
+            long t = Long.parseLong(reader.readLine().trim());
+
+            if (t < 2015) {
+                long ano = 2015 - t;
+                sb.append(ano).append(" D.C.\n");
+            } else {
+                long ano = t - 2015 + 1;
+                sb.append(ano).append(" A.C.\n");
+            }
+        }
+
+        System.out.print(sb);
     }
-
 }

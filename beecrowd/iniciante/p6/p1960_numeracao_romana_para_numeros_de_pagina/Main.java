@@ -1,22 +1,31 @@
 package beecrowd.iniciante.p6.p1960_numeracao_romana_para_numeros_de_pagina;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+        // Mapeamento dos valores arábicos para os numerais romanos
+        int[] valores = {900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] simbolos = {"CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+
+        StringBuilder sb = new StringBuilder();
+        // Converte o número arábico para romano
+        for (int i = 0; i < valores.length; i++) {
+            while (n >= valores[i]) {
+                sb.append(simbolos[i]);
+                // Desconta o valor do símbolo concatenado do total e reinicia o cálculo
+                n -= valores[i];
+            }
+        }
+
+        System.out.println(sb.toString());
 
     }
 

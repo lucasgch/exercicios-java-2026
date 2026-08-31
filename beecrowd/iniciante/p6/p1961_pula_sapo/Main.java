@@ -1,23 +1,39 @@
 package beecrowd.iniciante.p6.p1961_pula_sapo;
 
 import java.io.IOException;
+import java.util.Scanner;
 
-/**
- * IMPORTANT:
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+        Scanner sc = new Scanner(System.in);
+        int alturaDoPulo = sc.nextInt();
+        int numeroDeCanos = sc.nextInt();
 
+        // Guarda o primeiro cano como ponto de partida
+        int canoAnterior = sc.nextInt();
+        boolean conseguiuVencer = true;
+
+        for (int i = 1; i < numeroDeCanos; i++) {
+            int canoAtual = sc.nextInt();
+
+            // Verifica a diferença absoluta de altura (seja subindo ou descendo)
+            if (Math.abs(canoAtual - canoAnterior) > alturaDoPulo) {
+                conseguiuVencer = false;
+                break;
+            }
+
+            // Atualiza o cano onde o sapo está no momento
+            canoAnterior = canoAtual;
+        }
+
+        if (conseguiuVencer) {
+            System.out.println("YOU WIN");
+        } else {
+            System.out.println("GAME OVER");
+        }
+
+        sc.close();
     }
-
 }
